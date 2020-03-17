@@ -63,7 +63,7 @@ const Example = () => (
 ```html
 <div class="example">
   <h1 class="example__title-as3221">hello world</h1>
-  <h1 class="example__title-as3221 margin-bottom">with more classes</h1>
+  <h1 class="example__title-as3221 margin-bottom">with classes</h1>
 </div>
 ```
 
@@ -118,7 +118,7 @@ const App = () => {
 </div>
 ```
 
-### Locals, dynamic classes, global classes and classNames from the parent
+### Local classes, dynamic classes, global classes and classNames from the parent
 
 ```jsx
 const Input = ({className}) => (

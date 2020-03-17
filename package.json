@@ -9,7 +9,7 @@
   ],
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c rollup.config.ts",
+    "build": "rimraf dist && rollup -c rollup.config.ts",
     "watch": "rollup -c rollup.config.ts -w",
     "lint": "eslint --ext .ts src",
     "test": "jest --coverage",
@@ -33,6 +33,7 @@
     "jest": "^25.1.0",
     "lint-staged": "^9.5.0",
     "prettier": "1.19.0",
+    "rimraf": "^3.0.2",
     "rollup": "^1.27.12",
     "rollup-plugin-typescript2": "^0.25.3",
     "ts-jest": "^25.0.0",
