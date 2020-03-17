@@ -13,8 +13,8 @@
 ## Usage
 
 ```jsx
-import ClassNames from '@streamloots/classnames'
-import styles from './styles'
+import ClassNames from '@streamloots/classnames';
+import styles from './theme.scss';
 
 const classNames = ClassNames(styles)
 
@@ -35,5 +35,107 @@ const Example = () => (
 <div class="example">
   <h1 class="example__title-as3221">hello world</h1>
   <h1 class="example__title-as3221 margin-bottom">with more classes</h1>
+</div>
+```
+
+## Use Cases
+
+### Local Classes and global classes
+
+```jsx
+import ClassNames from '@streamloots/classnames';
+import styles from './theme.scss';
+
+const classNames = ClassNames(styles)
+
+const Example = () => (
+  <div>
+    <h1 className={classNames('example__title')}>hello world</h1>
+    <h1 className={classNames('example__title margin-bottom')}>with classes</h1>
+  </div>
+)
+```
+
+```html
+<div class="example">
+  <h1 class="example__title-as3221">hello world</h1>
+  <h1 class="example__title-as3221 margin-bottom">with more classes</h1>
+</div>
+```
+
+### How to combine localClasses and dynamic classes
+
+```jsx
+const Input = ({disabled}) => (
+  <div
+    className={classNames({
+      "form-group": true,
+      "disabled": disabled
+    })}
+  >
+    <input type="text" disabled={disabled} />
+  </div>
+)
+
+const App = () => {
+  return <Input disabled />
+}
+```
+
+```html
+<div class="form-group-20202 disabled-20202">
+  <input type="text" disabled />
+</div>
+```
+
+### Inject a className from a parent
+
+```jsx
+const Input = ({className}) => (
+  <div
+    className={classNames({
+      "form-group": true,
+      "disabled": disabled,
+      [className]: true,
+    })}
+  >
+    <input type="text" disabled={disabled} />
+  </div>
+)
+
+const App = () => {
+  return <Input className="margin-bottom" disabled />
+}
+```
+
+```html
+<div class="form-group-20202 disabled-20202 margin-bottom">
+  <input type="text" disabled />
+</div>
+```
+
+### Locals, dynamic classes, global classes and classNames from the parent
+
+```jsx
+const Input = ({className}) => (
+  <div
+    className={classNames({
+      "form-group margin-bottom": true,
+      "disabled": disabled,
+      [className]: true,
+    })}
+  >
+    <input className={className('input margin-bottom')} type="text" disabled={disabled} />
+  </div>
+)
+
+const App = () => {
+  return <Input className="box-shadow" disabled />
+}
+```
+
+```html
+<div class="form-group-20202 margin-bottom disabled-20202 box-shadow">
+  <input type="text" disabled />
 </div>
 ```
