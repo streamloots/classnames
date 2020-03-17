@@ -143,3 +143,8 @@ const App = () => {
   <input type="text" disabled />
 </div>
 ```
+
+
+## Contributing
+
+Before contributing read [the guidelines](.github/CONTRIBUTING.md) to submit a PR and what to do to publish the package 
