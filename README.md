@@ -7,6 +7,10 @@
 ## Install
 
 ```sh
+  yarn add @streamloots/classnames
+  
+  or
+  
   npm i --save @streamloots/classnames
 ```
 
@@ -63,7 +67,7 @@ const Example = () => (
 </div>
 ```
 
-### How to combine localClasses and dynamic classes
+### How to combine local classes and dynamic classes
 
 ```jsx
 const Input = ({disabled}) => (
@@ -88,7 +92,7 @@ const App = () => {
 </div>
 ```
 
-### Inject a className from a parent
+### Inject a className from a parent
 
 ```jsx
 const Input = ({className}) => (
