@@ -1,5 +1,5 @@
 # ClassNames
-[![NPM Version](https://img.shields.io/npm/v/@streamloots/classnames.svg)](https://www.npmjs.com/package/@streamloots/classnames) [![NPM Downloads](https://img.shields.io/npm/dm/@streamloots/classnames.svg)](https://www.npmjs.com/package/@streamloots/classnames) [![Travis](https://travis-ci.org/@streamloots/classnames.svg?branch=master)](https://travis-ci.org/streamloots/classnames) [![Coverage Status](https://coveralls.io/repos/github/streamloots/classnames/badge.svg?branch=master)](https://coveralls.io/github/streamloots/classnames?branch=master)
+[![NPM Version](https://img.shields.io/npm/v/@streamloots/classnames.svg)](https://www.npmjs.com/package/@streamloots/classnames) [![NPM Downloads](https://img.shields.io/npm/dm/@streamloots/classnames.svg)](https://www.npmjs.com/package/@streamloots/classnames) [![Travis](https://travis-ci.org/streamloots/classnames.svg?branch=master)](https://travis-ci.org/streamloots/classnames) [![Coverage Status](https://coveralls.io/repos/github/streamloots/classnames/badge.svg?branch=master)](https://coveralls.io/github/streamloots/classnames?branch=master)
 
 
 > A small utility to get classnames for css-modules and apply classes conditionally in react
