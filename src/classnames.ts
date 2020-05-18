@@ -1,4 +1,5 @@
 import applyClassNames from './applyClassnames';
+import invariant from 'tiny-warning';
 
 type ClassNamesFunction = (
   items: string | { [key: string]: boolean }
@@ -23,8 +24,21 @@ const ClassNames = (styles: { [key: string]: string }): ClassNamesFunction => {
     const finalClassNames = classNamesToBeApplied.map(className => {
       return stylesClasses.includes(className) ? _styles[className] : className;
     });
+    const classNamesResult = finalClassNames.join(' ');
+    const regexUndefined = new RegExp(/undefined/g);
 
-    return finalClassNames.join(' ');
+    const foundMatches = regexUndefined.test(classNamesResult);
+
+    invariant(
+      !foundMatches,
+      `You are using in your code a key which is undefined, obj found ${JSON.stringify(
+        obj,
+        null,
+        2
+      )}`
+    );
+
+    return classNamesResult;
   };
 
   return function(items: string | { [key: string]: boolean }): string {
