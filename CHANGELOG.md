@@ -14,6 +14,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### BREAKING CHANGES
 
 
+## [1.0.0-beta.1] - 2020-05-18
+### Added
+  - Added warning if there's dynamic class passed as undefined
+
+
 ## [1.0.0-beta.0] - 2020-03-17
 ### Added
   - Added className utilities
