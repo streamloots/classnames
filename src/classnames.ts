@@ -2,7 +2,7 @@ import applyClassNames from './applyClassnames';
 import invariant from 'tiny-warning';
 
 type ClassNamesFunction = (
-  items: string | { [key: string]: boolean }
+  items: string | { [key: string]: boolean | string }
 ) => string;
 
 const ClassNames = (styles: { [key: string]: string }): ClassNamesFunction => {
@@ -17,7 +17,7 @@ const ClassNames = (styles: { [key: string]: string }): ClassNamesFunction => {
       .join(' ');
   };
 
-  const classNames = (obj: { [key: string]: boolean }): string => {
+  const classNames = (obj: { [key: string]: string | boolean }): string => {
     const classNamesToBeApplied = applyClassNames(obj).split(' ');
     const stylesClasses = Object.keys(_styles);
 
@@ -41,7 +41,9 @@ const ClassNames = (styles: { [key: string]: string }): ClassNamesFunction => {
     return classNamesResult;
   };
 
-  return function(items: string | { [key: string]: boolean }): string {
+  return function (
+    items: string | { [key: string]: string | boolean }
+  ): string {
     if (typeof items === 'string') {
       return bem(items);
     }

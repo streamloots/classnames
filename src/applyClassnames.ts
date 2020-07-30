@@ -1,4 +1,4 @@
-const applyClassNames = (obj: { [key: string]: boolean }): string => {
+const applyClassNames = (obj: { [key: string]: string | boolean }): string => {
   return Object.keys(obj)
     .map(key => {
       return obj[key] ? key : '';

@@ -5,10 +5,7 @@ module.exports = {
     es6: true,
     jest: true
   },
-  extends: [
-    'prettier',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['prettier', 'plugin:@typescript-eslint/recommended'],
   parser: '@typescript-eslint/parser',
   plugins: ['prettier', '@typescript-eslint'],
   rules: {
@@ -25,7 +22,6 @@ module.exports = {
     'no-console': 1,
     'no-debugger': 2,
     '@typescript-eslint/camelcase': 0,
-    '@typescript-eslint/ban-ts-ignore': 2,
     'prettier/prettier': [
       2,
       {
