@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### BREAKING CHANGES
 
 
+## [1.0.0-beta.2] - 2020-07-30
+### Fixed
+  - Fixed typings for typescript when passing a dynamic string class
+
 ## [1.0.0-beta.1] - 2020-05-18
 ### Added
   - Added warning if there's dynamic class passed as undefined
