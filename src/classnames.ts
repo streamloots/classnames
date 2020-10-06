@@ -1,9 +1,8 @@
 import applyClassNames from './applyClassnames';
 import invariant from 'tiny-warning';
+import type { ArgClassName } from './types';
 
-type ClassNamesFunction = (
-  items: string | { [key: string]: boolean | string }
-) => string;
+type ClassNamesFunction = (items: string | ArgClassName) => string;
 
 const ClassNames = (styles: { [key: string]: string }): ClassNamesFunction => {
   const _styles = styles;
@@ -17,7 +16,7 @@ const ClassNames = (styles: { [key: string]: string }): ClassNamesFunction => {
       .join(' ');
   };
 
-  const classNames = (obj: { [key: string]: string | boolean }): string => {
+  const classNames = (obj: ArgClassName): string => {
     const classNamesToBeApplied = applyClassNames(obj).split(' ');
     const stylesClasses = Object.keys(_styles);
 
@@ -41,9 +40,7 @@ const ClassNames = (styles: { [key: string]: string }): ClassNamesFunction => {
     return classNamesResult;
   };
 
-  return function (
-    items: string | { [key: string]: string | boolean }
-  ): string {
+  return function (items: string | ArgClassName): string {
     if (typeof items === 'string') {
       return bem(items);
     }

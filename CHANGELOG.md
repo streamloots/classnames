@@ -13,6 +13,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 ### BREAKING CHANGES
 
+## [1.0.0-beta.3] - 2020-09-10
+### Fixed
+  - Fixed classnames for typescript strict mode
 
 ## [1.0.0-beta.2] - 2020-07-30
 ### Fixed
